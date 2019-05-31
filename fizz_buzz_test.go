@@ -14,4 +14,19 @@ func TestFizzBuzz(t *testing.T) {
 	if buzz != `buzz` {
 		t.Errorf("Number did not buzz at %d", 5)
 	}
+
+	fizzbuzz := FizzBuzz(15)
+	if fizzbuzz != `fizzbuzz` {
+		t.Errorf("Number did not fizzbuzz at %d", 15)
+	}
+
+	number := FizzBuzz(1)
+	if number != `1` {
+		t.Errorf("Number did return %d", 1)
+	}
+
+	zero := FizzBuzz(4)
+	if zero != `4` {
+		t.Errorf("Number did return %d", 4)
+	}
 }
