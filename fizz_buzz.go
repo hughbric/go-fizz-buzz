@@ -7,13 +7,13 @@ import (
 
 func FizzBuzz(number int) string {
 	result := ""
-	if number%3 == 0 && number%5 == 0 {
-		result += "fizzbuzz"
-	} else if number%3 == 0 {
+	if number%3 == 0 {
 		result += "fizz"
-	} else if number%5 == 0 {
+	}
+	if number%5 == 0 {
 		result += "buzz"
-	} else {
+	}
+	if result == "" {
 		result += strconv.Itoa(number)
 	}
 	return result
